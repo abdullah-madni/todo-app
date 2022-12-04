@@ -1,0 +1,107 @@
+.login, .logOut, body{
+    display: none;
+}
+
+.main{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.btn-plus{
+    background-color: var(--bs-primary);
+    border: 2px solid var(--bs-primary);
+    color: white;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.btn-plus:hover{
+    background-color: #fff;
+    color: var(--bs-primary);
+}
+
+#add_todo_btn, #update_todo_btn{
+    display: none;
+}
+
+.todo-list{
+    margin: 0;
+    padding: 0;
+}
+
+.todo-item{
+    list-style-type: none;
+    padding: 12px 10px;
+}
+
+.todo-item div{
+    display: inline-block;
+    float: right;
+}
+
+.todo-item button{
+    border: none;
+    margin-left: 1.5rem;
+    display: inline-block;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+.update-todo:hover{
+    background-color: var(--bs-success);
+    color: #fff;
+}
+.delete-todo:hover{
+    background-color: var(--bs-danger);
+    color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+    .main{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main{
+        width: 500px;
+    }
+    
+    .todo-item button{
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .main{
+        width: 90%;
+    }
+
+    .todo-item button {
+        margin-left: 0.5rem;
+        font-size: 16px;
+        padding: 3px 6px;
+    }
+
+    .title-heading{
+        padding-bottom: 1rem !important;
+        padding-top: 5rem !important;
+    }
+
+    #logoutBtn{    
+        margin-top: 1.5rem !important;
+        margin-bottom: 1rem !important;
+        left: 50%;
+        right: unset !important;
+        transform: translateX(-50%);
+    }
+}

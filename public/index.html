@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TODO-APP</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1 class="py-5 fs-1 text-center fw-bolder text-primary title-heading">TODO APP</h1>
+
+  <!-- To-do container -->
+  <div class="main">
+    <ul class="todo-list login">
+    </ul>
+  </div>
+
+  <!-- login -->
+  <div
+    class="position-absolute top-50 start-50 translate-middle text-center bg-dark bg-opacity-10 p-sm-5 p-3 rounded-5 shadow-sm logout"
+    style="min-width: 300px;" id="login_container">
+    <h1 class="text-primary mb-3">You are not Locked in Please!</h1>
+    <button type="button" class="btn btn-primary" id="loginBtn">
+      <i class="bi bi-google"></i> &nbsp;
+      Login with Google
+    </button>
+  </div>
+
+  <!-- logout -->
+  <button class="btn btn-danger position-absolute top-0 end-0 m-sm-4 login" id="logoutBtn">Logout</button>
+
+  <!-- to-do modal -->
+  <!-- Modal trigger button -->
+  <button type="button" class="btn-plus login" data-bs-toggle="modal" data-bs-target="#add_todo_modal">
+    <i class="bi bi-plus-lg"></i>
+  </button>
+  <!-- TO-DO Modal -->
+  <div class="modal fade" id="add_todo_modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">YOUR TODO</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input class="form-control" type="text" placeholder="Enter Here Some Text..." id="input_todo" autocomplete="off">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="add_todo_btn">Add</button>
+          <button type="button" class="btn btn-success" id="update_todo_btn">Update</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
